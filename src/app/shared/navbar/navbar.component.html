@@ -1,11 +1,11 @@
 <mat-toolbar>
-<mat-toolbar-row>
-<mat-tab-group disableRipple> 
-    <mat-tab label="Dashboard"></mat-tab>
-    <mat-tab label="Challenges"></mat-tab>
-    <mat-tab label="Leaderboards"></mat-tab>
-</mat-tab-group>
-<span class="spacer"></span>
-<div class="profileImg"></div>
-</mat-toolbar-row>
+    <mat-toolbar-row>
+        <mat-tab-group disableRipple (selectedTabChange)="navigate($event)">
+            <div *ngFor="let route of navigationRoutes"> 
+                <mat-tab label="{{route.name}}"></mat-tab>
+            </div>
+        </mat-tab-group>
+        <span class="spacer"></span>
+        <div class="profileImg"></div>
+    </mat-toolbar-row>
 </mat-toolbar>
