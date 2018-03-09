@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MatTabChangeEvent } from '@angular/material';
+
+interface NavigationRoutes {
+  name: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +14,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public navigationRoutes: Array<NavigationRoutes>;
 
+  constructor(public router: Router) {
+    this.navigationRoutes = [
+        {
+          name: 'Leaderboards',
+          url: 'leaderboards'
+        },
+        {
+          name: 'Dashboard',
+          url: 'dashboard'
+        }
+    ]
+  }
+  navigate(event: MatTabChangeEvent) {
+    this.router.navigateByUrl(event.tab.textLabel.toLowerCase());
+  
+  }
   ngOnInit() {
   }
 
