@@ -45,8 +45,18 @@
 }
 
 .chip{
-    float: right;
     margin-top: 12px;
+}
+
+.chipContent {
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    min-width: 40px;
+    height: 19px;
+    color: #27829F;
+    background-color: #ECECEC;
 }
 
 .mat-list-item-content {

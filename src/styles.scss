@@ -16,7 +16,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
  }
 
 
@@ -51,4 +51,8 @@ body {
 
 .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
     background-color: transparent;
+}
+
+.mat-list-item {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
