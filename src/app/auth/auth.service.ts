@@ -20,6 +20,7 @@ interface User {
 export class AuthService {
     user: Observable<User>;
     userId: string;
+    userData: Object;
 
     constructor(private afAuth: AngularFireAuth,
         private afs: AngularFirestore,
@@ -27,7 +28,11 @@ export class AuthService {
         private router: Router) {
         this.user = this.afAuth.authState.switchMap(user => {
             if (user) {
-                return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+                this.afs.doc<User>(`users/${user.uid}`).valueChanges().subscribe(data => {
+                    console.log(data);
+                    return data;
+                });
+               
             } else {
                 return Observable.of(null);
             }
@@ -36,7 +41,7 @@ export class AuthService {
         this.afAuth.authState.do(user => {
             if (user) {
                 this.userId = user.uid;
-                console.log(this.userId);
+                this.userData = user;
             }
         }).subscribe();
     }
@@ -67,6 +72,7 @@ export class AuthService {
 
     public logout() {
         this.afAuth.auth.signOut();
+        this.userData = null;
         console.log("logout");
     }
 }

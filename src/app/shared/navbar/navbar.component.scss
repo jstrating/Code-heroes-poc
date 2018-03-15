@@ -7,9 +7,15 @@
     background-position: center center;
     background-size: cover;
     box-shadow: 0px 1px 2px black;
-    background-image: url(https://avatars2.githubusercontent.com/u/10846244?s=460&v=4);
 }
 
 .spacer {
     flex: 1 1 auto;
+}
+
+.signIn {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0px 1px 1px black; 
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
