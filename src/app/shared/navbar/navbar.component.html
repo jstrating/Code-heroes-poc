@@ -6,7 +6,7 @@
             </div>
         </mat-tab-group>
         <span class="spacer"></span>
-        <div class="profileImg"></div>
+        <div class="profileImg" (click)="auth.googleLogin()"></div>
         <button (click)="sidemenu.toggle()" mat-icon-button *ngIf="isOver()">
             <mat-icon>menu</mat-icon>
         </button>

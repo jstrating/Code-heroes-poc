@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatTabChangeEvent } from '@angular/material';
 import { MatSidenav } from '@angular/material'; 
+import { AuthService } from '../../auth/auth.service';
 
 interface NavigationRoutes {
   name: string;
@@ -17,7 +18,7 @@ export class NavbarComponent implements OnInit {
 
   public navigationRoutes: Array<NavigationRoutes>;
 
-  constructor(public router: Router) {
+  constructor(public router: Router, public auth: AuthService) {
     this.navigationRoutes = [
         {
           name: 'Leaderboards',
@@ -35,7 +36,6 @@ export class NavbarComponent implements OnInit {
   }
   ngOnInit() {
   }
-
 
   @Input()
   public sidemenu: MatSidenav;

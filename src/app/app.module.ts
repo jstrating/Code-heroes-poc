@@ -19,11 +19,11 @@ import { LeaderboardIndividualCardComponent } from './leaderboards/leaderboard-i
 import { DashboardOverviewComponent } from './dashboard/dashboard-overview/dashboard-overview.component';
 import { LeaderboardsModule } from './leaderboards/leaderboards.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-
+import { AuthModule } from './auth/auth.module'
 const routes: Routes = [
-  {path: '', redirectTo: 'leaderboards', pathMatch: 'full'},
-  {path: 'leaderboards', component: LeaderboardOverviewComponent},
-  {path: 'dashboard', component: DashboardOverviewComponent},
+  { path: '', redirectTo: 'leaderboards', pathMatch: 'full' },
+  { path: 'leaderboards', component: LeaderboardOverviewComponent },
+  { path: 'dashboard', component: DashboardOverviewComponent },
 ]
 
 @NgModule({
@@ -36,12 +36,13 @@ const routes: Routes = [
     DashboardModule,
     BrowserAnimationsModule,
     SharedModule,
-    RouterModule.forRoot(routes, {useHash: true}),
+    RouterModule.forRoot(routes, { useHash: true }),
     AngularFireModule.initializeApp(environment.firebase, 'code-heroes'),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
