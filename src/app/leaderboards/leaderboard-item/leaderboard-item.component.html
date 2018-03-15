@@ -1,21 +1,21 @@
 <mat-list-item role="list-item" class="row">
   <div class="positionChange" >
-    <img src="../../assets/position_increase.svg" />
+    <img src="../../assets/position_{{user.positionChange}}.svg" />
   </div>
   <div class="position">5</div>
-  <div class="profileImage"></div>
+  <div class="profileImage"  [ngStyle]="{'background-image': user.avatar}"></div>
   <div class="info">
     <div class="name">
-      Jesper Strating
+      {{user.name}}
     </div>
     <div class="subname">
-      Frontend
+      {{user.role}}
     </div>
   </div>
 
   <div class="chip columns">
     <div class="chipContent">
-      10
+      {{user.points}}
     </div>
   </div>
 </mat-list-item>
