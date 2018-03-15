@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="10px" height="10px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>Triangle</title>
+    <title>Triangle Copy</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Home-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-86.000000, -179.000000)">
-        <g id="Content" transform="translate(0.000000, -1.000000)" fill="#65D710">
+    <g id="Home-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-289.000000, -179.000000)">
+        <g id="Content" transform="translate(0.000000, -1.000000)" fill="#C65141">
             <g id="Leaderboards" transform="translate(0.000000, 1.000000)">
                 <g id="Leaderboard">
                     <g id="Leaders-Copy" transform="translate(69.000000, 152.000000)">
                         <g id="Top-3">
-                            <g id="#2" transform="translate(0.000000, 21.000000)">
-                                <g id="Position-+-change-Copy-2" transform="translate(17.000000, 0.000000)">
-                                    <polygon id="Triangle" points="2.5 6 5 11 0 11"></polygon>
+                            <g id="#3" transform="translate(203.000000, 21.000000)">
+                                <g id="Position-+-change-Copy" transform="translate(17.000000, 0.000000)">
+                                    <polygon id="Triangle-Copy" transform="translate(2.500000, 8.500000) rotate(-180.000000) translate(-2.500000, -8.500000) " points="2.5 6 5 11 0 11"></polygon>
                                 </g>
                             </g>
                         </g>

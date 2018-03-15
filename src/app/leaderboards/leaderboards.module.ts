@@ -4,6 +4,7 @@ import { LeaderboardOverviewComponent } from './leaderboard-overview/leaderboard
 import { LeaderboardIndividualCardComponent } from './leaderboard-individual-card/leaderboard-individual-card.component';
 import { MatCardModule, MatGridListModule, MatListModule } from '@angular/material';
 import { LeaderboardItemComponent } from './leaderboard-item/leaderboard-item.component';
+import { LeaderboardTopThreeComponent } from './leaderboard-top-three/leaderboard-top-three.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -11,7 +12,7 @@ import { LeaderboardItemComponent } from './leaderboard-item/leaderboard-item.co
     MatGridListModule,
     MatListModule
   ],
-  declarations: [LeaderboardOverviewComponent, LeaderboardIndividualCardComponent, LeaderboardItemComponent],
+  declarations: [LeaderboardOverviewComponent, LeaderboardIndividualCardComponent, LeaderboardItemComponent, LeaderboardTopThreeComponent],
   exports: [LeaderboardIndividualCardComponent, LeaderboardOverviewComponent]
 })
 export class LeaderboardsModule { }

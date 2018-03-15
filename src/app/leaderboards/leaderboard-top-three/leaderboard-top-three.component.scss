@@ -1,0 +1,70 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.second {
+    margin-top: 20px;
+}
+
+.first {
+    margin-left: 40px;
+}
+
+.third{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.positionChange {
+    margin-top: 4px;
+}
+.positionNumber {
+    margin-left: 4px;
+    color: #27829F;
+    font-size: 20px;
+    font-weight: bold;
+}
+.winnerAvatar {
+    margin-top: 3px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0px 1px 2px black;
+    background-image: url(https://avatars2.githubusercontent.com/u/10846244?s=460&v=4);
+}
+
+.avatar {
+    margin-top: 3px;
+    margin-left: 4px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0px 1px 2px black;
+    background-image: url(https://avatars2.githubusercontent.com/u/10846244?s=460&v=4);
+}
+
+.avatarContainer {
+    width: 100%;
+    margin: 0 auto;
+}
+.info {
+    text-align: center;
+    margin-top: 5px;
+}
+.name {
+    font-size: 16px;
+    color: #27829F;
+    font-weight: bold;
+}
+.subName {
+    font-size: 14px;
+    color: #C7C7C7;
+    font-weight: bold;
+}
