@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatTabChangeEvent } from '@angular/material';
+import { MatSidenav } from '@angular/material'; 
 
 interface NavigationRoutes {
   name: string;
@@ -10,7 +11,7 @@ interface NavigationRoutes {
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
 
@@ -35,4 +36,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  @Input()
+  public sidemenu: MatSidenav;
+
+  public isOver(): boolean {
+    return window.matchMedia(`(max-width: 960px)`).matches;
+  }
 }

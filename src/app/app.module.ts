@@ -14,30 +14,32 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { LeaderboardsComponent } from './leaderboards/leaderboards.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { LeaderboardOverviewComponent } from './leaderboards/leaderboard-overview/leaderboard-overview.component';
+import { LeaderboardIndividualCardComponent } from './leaderboards/leaderboard-individual-card/leaderboard-individual-card.component';
+import { DashboardOverviewComponent } from './dashboard/dashboard-overview/dashboard-overview.component';
+import { LeaderboardsModule } from './leaderboards/leaderboards.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 const routes: Routes = [
   {path: '', redirectTo: 'leaderboards', pathMatch: 'full'},
-  {path: 'leaderboards', component: LeaderboardsComponent},
-  {path: 'dashboard', component: DashboardComponent},
+  {path: 'leaderboards', component: LeaderboardOverviewComponent},
+  {path: 'dashboard', component: DashboardOverviewComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    LeaderboardsComponent,
-    DashboardComponent,
   ],
   imports: [
     BrowserModule,
+    LeaderboardsModule,
+    DashboardModule,
     BrowserAnimationsModule,
     SharedModule,
     RouterModule.forRoot(routes, {useHash: true}),
     AngularFireModule.initializeApp(environment.firebase, 'code-heroes'),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

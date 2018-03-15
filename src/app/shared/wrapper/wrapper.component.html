@@ -1,5 +1,12 @@
-<app-navbar>
-</app-navbar>
-<div class="app-inner-routes">
-    <ng-content></ng-content>
-</div>
+<mat-sidenav-container class="app-inner">
+    <mat-sidenav #sidemenu opened mode="side" position="end" [mode]="isOver() ? 'over' : 'side'" [opened]="!isOver()">
+        <app-activity-side-nav></app-activity-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-navbar [sidemenu]="sidemenu">
+        </app-navbar>
+        <div class="app-inner-routes">
+            <ng-content class="content"></ng-content>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

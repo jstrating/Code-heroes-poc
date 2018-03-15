@@ -1,0 +1,76 @@
+<div class="container row align-center">
+  <div class="second">
+    <div class="position row align-center">
+      <div class="positionChange">
+        <img src="../../assets/position_{{second.positionChange}}.svg"/>
+      </div>
+      <div class="positionNumber">
+        2
+      </div>
+    </div>
+    <div class="avatar align-center" [ngStyle]="{'background-image': second.avatar}"></div>
+    <div class="info">
+      <div class="name">
+        {{second.name}}
+      </div>
+      <div class="subName">
+        {{second.role}}
+      </div>
+    </div>
+    <div class="chipContainer">
+      <div class="chip">
+        {{second.points}}
+      </div>
+    </div>
+  </div>
+  <div class="first">
+    <div class="position row align-center">
+      <div class="positionChange">
+        <img src="../../assets/position_{{winner.positionChange}}.svg"  />
+      </div>
+      <div class="positionNumber">
+        1
+      </div>
+    </div>
+    <div class="winnerAvatar align-center" [ngStyle]="{'background-image': winner.avatar}"></div>
+    <div class="info">
+      <div class="name">
+        {{winner.name}}
+      </div>
+      <div class="subName">
+        {{winner.role}}
+      </div>
+    </div>
+    <div class="chipContainer">
+      <div class="chip">
+        {{winner.points}}
+      </div>
+    </div>
+  </div>
+  <div class="third">
+    <div class="position row align-center">
+      <div class="positionChange">
+        <img src="../../assets/position_{{third.positionChange}}.svg" />
+      </div>
+      <div class="positionNumber">
+        3
+      </div>
+    </div>
+    <div class="avatarContainer">
+      <div class="avatar" [ngStyle]="{'background-image': third.avatar}"></div>
+    </div>
+    <div class="info">
+      <div class="name">
+       {{third.name}}
+      </div>
+      <div class="subName">
+        {{third.role}}
+      </div>
+    </div>
+    <div class="chipContainer">
+      <div class="chip">
+        {{third.points}}
+      </div>
+    </div>
+  </div>
+</div>

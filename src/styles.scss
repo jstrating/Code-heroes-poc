@@ -1,17 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~foundation-sites/scss/foundation';
+@include foundation-flex-classes;
+@include foundation-flex-grid;
 
 html {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    background-image: linear-gradient(to top left, #43cea2 0%, #185a9d 100%);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
 }
 
 body {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
  }
 
 
@@ -46,4 +51,13 @@ body {
 
 .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
     background-color: transparent;
+}
+
+.mat-list-item {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-top: 22px;
+}
+
+.mat-icon {
+    color: white;
 }
