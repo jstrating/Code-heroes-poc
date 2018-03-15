@@ -56,7 +56,7 @@
 }
 .info {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 9px;
 }
 .name {
     font-size: 16px;
@@ -67,4 +67,18 @@
     font-size: 14px;
     color: #C7C7C7;
     font-weight: bold;
+}
+
+.chipContainer {
+    margin-top: 10px;
+}
+.chip {
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    width: 40px;
+    height: 19px;
+    color: #27829F;
+    background-color: #ECECEC;
 }
