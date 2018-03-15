@@ -1,14 +1,21 @@
 <mat-toolbar>
-    <mat-toolbar-row>
-        <mat-tab-group disableRipple (selectedTabChange)="navigate($event)">
-            <div *ngFor="let route of navigationRoutes"> 
-                <mat-tab label="{{route.name}}"></mat-tab>
-            </div>
-        </mat-tab-group>
-        <span class="spacer"></span>
-        <div class="profileImg"></div>
-        <button (click)="sidemenu.toggle()" mat-icon-button *ngIf="isOver()">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </mat-toolbar-row>
+  <mat-toolbar-row>
+    <mat-tab-group disableRipple (selectedTabChange)="navigate($event)">
+      <div *ngFor="let route of navigationRoutes">
+        <mat-tab label="{{route.name}}"></mat-tab>
+      </div>
+    </mat-tab-group>
+    <span class="spacer"></span>
+    <div *ngIf="!auth.userData" class="signIn">Sign in</div>
+    <button *ngIf="!auth.userData" (click)="auth.googleLogin()" mat-icon-button>
+      <mat-icon>face</mat-icon>
+    </button>
+    <div *ngIf="auth.userData" class="profileImg" [ngStyle]="{'background-image': 'url('+ auth.userData.photoURL + ')' }"></div>
+    <button mat-icon-button *ngIf="auth.userData" (click)="auth.logout()">
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+    <button (click)="sidemenu.toggle()" mat-icon-button *ngIf="isOver()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
