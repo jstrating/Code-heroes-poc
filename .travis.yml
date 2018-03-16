@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- '8.6'
+dist: trusty
+before_script:
+- npm list -g @angular/cli --depth=0 || npm install -g @angular/cli
+- npm list -g firebase-tools --depth=0 || npm install -g firebase-tools
+script:
+- npm install
+- ng build --prod --aot --env=prod --sm false
+after_success:
+- "$TRAVIS_BUILD_DIR/.travis/deploy.sh develop"
+cache:
+  directories:
+  - "$(npm config get prefix)/bin/@angular/cli"
+  - "$(npm config get prefix)/bin/firebase-tools"
+  - node_modules
+notifications:
+  email: false
+  slack:
+    secure: daHxvsNvI2OMleqdFSLbR8S5lCN8vaAyY8T3hyVFJmGrWDvLIBkGI/xhakIE3FiuZsPNQeMdm4xbutMLOb9Nwi5fejTIHJtXxlG5bvYjI+54lynM8TNYhiGcwrNY9lHaRgp3O8nN5UshNC8SpXyVdH66XzKJ+Lo8yaH79QlniaRama98LgP/0nf5UnySyej4A4eW/G+4mviFDoa1JRfNXkgqaGYdsUisiAUhXzgSEuIdX4Iz+Pxye0yhg6mUcmL/6iDszu9fX5uNWbsYn0ZEeHStWz/B6FeUrKm8+xBEAd5UdS55FfA4Vfhz+4ePJQnFEP1iB7e41Oj052TVLIsQvMG9vXZJoMnkmtKD9KyOAjKGHczJ/o641DOEvBs9OySZJ1qttkf1ZCAldmoPjLNDpy2PPgcGScKU886BROUw/lT8JPsmFGjqgaPWuGd662AZKp3fdnFOhlt2uXloa3qgQyo/4SaQ6Dv54VKp9LXrE/0IASGjJIiQvhrBLTKN+VGtg0bEkK2Kp4DW5tbGRmWBlwpa2Mt09ei+EZbbE4LSvZEaVAjIkNwrko2l72GKOVWpJDjkn7GXP7jTs5ybt/l9gtEMuNB2e/ePtA2eGb2tGLn5/eIL/UGuiMj9i/nEt0jbx8usesbaUDbJM+cAfEWzL+3XaDaEUl4JLAF2DuS37vE=
