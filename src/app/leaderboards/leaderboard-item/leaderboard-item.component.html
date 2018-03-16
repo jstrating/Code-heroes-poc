@@ -1,20 +1,20 @@
 <mat-list-item role="list-item" class="row">
-  <div class="positionChange" >
+  <div *ngIf="user" class="positionChange" >
     <img src="../../assets/position_{{user.positionChange}}.svg" />
   </div>
   <div class="position">5</div>
-  <div class="profileImage"  [ngStyle]="{'background-image': user.avatar}"></div>
-  <div class="info">
+  <div *ngIf="user" class="profileImage"  [ngStyle]="{'background-image': user.avatar}"></div>
+  <div *ngIf="user" class="info">
     <div class="name">
       {{user.name}}
     </div>
-    <div class="subname">
+    <div *ngIf="user" class="subname">
       {{user.role}}
     </div>
   </div>
 
   <div class="chip columns">
-    <div class="chipContent">
+    <div *ngIf="user" class="chipContent">
       {{user.points}}
     </div>
   </div>
