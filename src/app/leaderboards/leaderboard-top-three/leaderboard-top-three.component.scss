@@ -21,11 +21,12 @@
 }
 .positionNumber {
     margin-left: 4px;
-    color: #27829F;
+    color: #434343;
     font-size: 20px;
     font-weight: bold;
 }
 .winnerAvatar {
+    margin: 0 auto;
     margin-top: 3px;
     width: 70px;
     height: 70px;
@@ -37,8 +38,8 @@
 }
 
 .avatar {
+    margin: 0 auto;
     margin-top: 3px;
-    margin-left: 4px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -53,18 +54,20 @@
     margin: 0 auto;
 }
 .info {
+    margin: 0 auto;
     text-align: center;
     margin-top: 9px;
 }
 .name {
     font-size: 16px;
-    color: #27829F;
+    color: #434343;
     font-weight: bold;
 }
 .subName {
     font-size: 14px;
     color: #C7C7C7;
-    font-weight: bold;
+    font-weight: medium;
+    text-transform: uppercase;
 }
 
 .chipContainer {
@@ -77,6 +80,6 @@
     font-weight: bold;
     width: 40px;
     height: 19px;
-    color: #27829F;
+    color: #434343;
     background-color: #ECECEC;
 }

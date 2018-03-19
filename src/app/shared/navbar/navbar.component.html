@@ -11,9 +11,6 @@
       <mat-icon>face</mat-icon>
     </button>
     <div *ngIf="auth.userData" class="profileImg" [ngStyle]="{'background-image': 'url('+ auth.userData.photoURL + ')' }"></div>
-    <button mat-icon-button *ngIf="auth.userData" (click)="auth.logout()">
-        <mat-icon>exit_to_app</mat-icon>
-      </button>
     <button (click)="sidemenu.toggle()" mat-icon-button *ngIf="isOver()">
       <mat-icon>menu</mat-icon>
     </button>
