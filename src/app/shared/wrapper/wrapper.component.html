@@ -6,7 +6,8 @@
         <app-navbar [sidemenu]="sidemenu">
         </app-navbar>
         <div class="app-inner-routes">
-            <ng-content class="content"></ng-content>
+            <ng-content *ngIf="auth.userData" class="content"></ng-content>
+            <div  *ngIf="!auth.userData" class="emptyState"></div>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

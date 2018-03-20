@@ -17,14 +17,14 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-family: 'Overpass', sans-serif;
  }
 
 .mat-tab-label {
     color: #434343;
     opacity: 0.62 !important;
     font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Overpass', sans-serif;
 }
 
 .mat-tab-label:focus:not(.mat-tab-disabled){
@@ -53,7 +53,7 @@ body {
 }
 
 .mat-list-item {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Overpass', sans-serif;
     margin-top: 22px;
 }
 

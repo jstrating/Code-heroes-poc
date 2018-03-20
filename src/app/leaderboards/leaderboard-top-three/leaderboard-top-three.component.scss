@@ -1,10 +1,12 @@
 .container {
     width: 100%;
     margin: 0 auto;
+    font-family: 'Overpass', sans-serif;
 }
 
 .second {
     margin-top: 20px;
+    font-family: 'Overpass', sans-serif;
 }
 
 .first {
@@ -59,14 +61,15 @@
     margin-top: 9px;
 }
 .name {
-    font-size: 16px;
+    font-size: 18px;
     color: #434343;
     font-weight: bold;
+    font-family: 'Overpass', sans-serif;
 }
 .subName {
     font-size: 14px;
     color: #C7C7C7;
-    font-weight: medium;
+    font-weight: lighter;
     text-transform: uppercase;
 }
 
