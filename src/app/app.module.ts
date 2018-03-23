@@ -20,7 +20,6 @@ import { DashboardOverviewComponent } from './dashboard/dashboard-overview/dashb
 import { LeaderboardsModule } from './leaderboards/leaderboards.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AuthModule } from './auth/auth.module';
-import { OrderPipeComponent } from './core/pipes/order-pipe/order-pipe.component'
 const routes: Routes = [
   { path: '', redirectTo: 'leaderboards', pathMatch: 'full' },
   { path: 'leaderboards', component: LeaderboardOverviewComponent },
@@ -29,8 +28,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    OrderPipeComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
