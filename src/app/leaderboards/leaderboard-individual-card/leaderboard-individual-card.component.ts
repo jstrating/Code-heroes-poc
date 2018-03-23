@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { SlicePipe } from '@angular/common';
 
 @Component({
   selector: 'app-leaderboard-individual-card',
@@ -6,16 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leaderboard-individual-card.component.scss']
 })
 export class LeaderboardIndividualCardComponent implements OnInit {
-  user = {
-    name: "Jesper Strating",
-    role: "Frontend",
-    points: "10",
-    positionChange: "increase",
-    avatar: "url(" +'https://avatars1.githubusercontent.com/u/10846244?s=400&u=8f3cfe2e8b4cf78226a8138e166270cc243ab1c8&v=4' +')'
+
+  users: any;
+
+  constructor(db: AngularFirestore) { 
+    db.collection('/games/c4lUBr3vo4onHKBQIOJh/players').valueChanges().subscribe(data => {
+      this.users =  this.sortByScore(data);
+      console.log(this.users);
+    })
+  }
+ 
+  sortByScore(array) {
+      array.sort((a: any, b: any) => {
+        if (a.score > b.score) {
+          return -100;
+        } else if (a.score < b.score) {
+          return 100;
+        } else {
+          return 0;
+        }
+      });
+      return array;
   }
 
-  constructor() { }
- 
   ngOnInit() {
   }
 

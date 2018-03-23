@@ -1,9 +1,9 @@
 <mat-list-item role="list-item" class="row">
-  <div *ngIf="user" class="positionChange" >
+  <!-- <div *ngIf="user" class="positionChange" >
     <img src="../../assets/position_{{user.positionChange}}.svg" />
-  </div>
-  <div class="position">4.</div>
-  <div *ngIf="user" class="profileImage"  [ngStyle]="{'background-image': user.avatar}"></div>
+  </div> -->
+  <!-- <div class="position">4.</div> -->
+  <div *ngIf="user" class="profileImage"  [ngStyle]="{'background-image': 'url(' + user.avatar + ')'}"></div>
   <div *ngIf="user" class="info">
     <div class="name">
       {{user.name}}
@@ -15,7 +15,7 @@
 
   <div class="chip columns">
     <div *ngIf="user" class="chipContent">
-      {{user.points}}
+      {{user.score}}
     </div>
   </div>
 </mat-list-item>
