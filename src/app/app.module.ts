@@ -20,6 +20,7 @@ import { DashboardOverviewComponent } from './dashboard/dashboard-overview/dashb
 import { LeaderboardsModule } from './leaderboards/leaderboards.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AuthModule } from './auth/auth.module';
+
 const routes: Routes = [
   { path: '', redirectTo: 'leaderboards', pathMatch: 'full' },
   { path: 'leaderboards', component: LeaderboardOverviewComponent },
