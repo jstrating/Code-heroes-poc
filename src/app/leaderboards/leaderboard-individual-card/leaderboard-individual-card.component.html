@@ -1,7 +1,7 @@
-<mat-card>
+<mat-card class="card-fade-in">
   <mat-card-title>Top coders today</mat-card-title>
-  <mat-card-content>
-    <div class="topCoders">
+  <mat-card-content class="fade-in-item">
+    <div *ngIf="users">
         <app-leaderboard-top-three [users]="users"></app-leaderboard-top-three>
     </div>
     <hr>

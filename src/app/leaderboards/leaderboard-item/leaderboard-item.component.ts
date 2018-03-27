@@ -9,7 +9,6 @@ export class LeaderboardItemComponent implements OnInit {
  
   @Input() user: object;
 
-  
 
 
   constructor() { }

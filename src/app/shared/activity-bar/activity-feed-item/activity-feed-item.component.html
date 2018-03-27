@@ -1,0 +1,17 @@
+<div class="my-animation" class="container row">
+  <div *ngIf="user" class="profileImage" [ngStyle]="{'background-image': 'url(' + user.photoURL + ')'}"></div>
+  <div *ngIf="user" class="info">
+    <div class="name">
+      {{scoreDescription}}
+    </div>
+    <div *ngIf="user" class="subname">
+      {{user.displayName}}
+    </div>
+  </div>
+
+  <div class="chip columns">
+    <div *ngIf="user" class="chipContent">
+      {{score.score}}
+    </div>
+  </div>
+</div>

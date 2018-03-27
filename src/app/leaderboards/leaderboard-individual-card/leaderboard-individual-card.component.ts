@@ -10,14 +10,21 @@ import { SlicePipe } from '@angular/common';
 export class LeaderboardIndividualCardComponent implements OnInit {
 
   users: any;
+  db: any;
+
 
   constructor(db: AngularFirestore) { 
-    db.collection('/games/c4lUBr3vo4onHKBQIOJh/players').valueChanges().subscribe(data => {
-      this.users =  this.sortByScore(data);
-      console.log(this.users);
+    this.db = db;
+    this.getUsers();
+  
+  }
+  
+  async getUsers(){
+    await this.db.collection('/games/c4lUBr3vo4onHKBQIOJh/players').valueChanges().subscribe(data => {
+     this.users =  this.sortByScore(data);
     })
   }
- 
+
   sortByScore(array) {
       array.sort((a: any, b: any) => {
         if (a.score > b.score) {
