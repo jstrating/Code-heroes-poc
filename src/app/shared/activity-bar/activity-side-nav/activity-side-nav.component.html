@@ -1,0 +1,10 @@
+<div class="root">
+  <div class="content">
+    <div class="title">
+      Activity for {{date}}
+    </div>
+      <div class="my-animation" *ngFor="let score of scores">
+        <app-activity-feed-item [score]="score"></app-activity-feed-item>
+      </div>
+  </div>
+</div>

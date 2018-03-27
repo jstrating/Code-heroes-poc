@@ -1,75 +1,75 @@
-<div class="container row align-center">
-  <div class="second">
+<div *ngIf="users" class="container row align-center">
+  <div class="second column">
     <div class="position row align-center">
-      <div class="positionChange">
+      <!-- <div class="positionChange">
         <img src="../../assets/position_{{second.positionChange}}.svg"/>
-      </div>
+      </div> -->
       <div class="positionNumber">
         2
       </div>
     </div>
-    <div class="avatar align-center" [ngStyle]="{'background-image': second.avatar}"></div>
+    <div *ngIf="users[1].avatar" class="avatar align-center" [ngStyle]="{'background-image': 'url(' + users[1].avatar + ')'}"></div>
     <div class="info">
       <div class="name">
-        {{second.name}}
+        {{ (users[1].name.length>6)? (users[1].name | slice:0:6)+'..':(users[1].name) }}
       </div>
-      <div class="subName">
-        {{second.role}}
+      <div *ngIf="users[1].role" class="subName">
+        {{users[1].role}}
       </div>
     </div>
     <div class="chipContainer">
       <div class="chip">
-        {{second.points}}
+        {{users[1].score}}
       </div>
     </div>
   </div>
-  <div class="first">
+  <div class="first column">
     <div class="position row align-center">
-      <div class="positionChange">
+      <!-- <div class="positionChange">
         <img src="../../assets/position_{{winner.positionChange}}.svg"  />
-      </div>
+      </div> -->
       <div class="positionNumber">
         1
       </div>
     </div>
-    <div class="winnerAvatar align-center" [ngStyle]="{'background-image': winner.avatar}"></div>
+    <div class="winnerAvatar align-center" [ngStyle]="{'background-image': 'url(' + users[0].avatar + ')'}"></div>
     <div class="info">
       <div class="name">
-        {{winner.name}}
+        {{ (users[0].name.length>6)? (users[0].name | slice:0:6)+'..':(users[0].name) }}
       </div>
       <div class="subName">
-        {{winner.role}}
+        {{users[0].role}}
       </div>
     </div>
     <div class="chipContainer">
       <div class="chip">
-        {{winner.points}}
+        {{users[0].score}}
       </div>
     </div>
   </div>
-  <div class="third">
+  <div class="third column">
     <div class="position row align-center">
-      <div class="positionChange">
+      <!-- <div class="positionChange">
         <img src="../../assets/position_{{third.positionChange}}.svg" />
-      </div>
+      </div> -->
       <div class="positionNumber">
         3
       </div>
     </div>
     <div class="avatarContainer">
-      <div class="avatar" [ngStyle]="{'background-image': third.avatar}"></div>
+      <div class="avatar" [ngStyle]="{'background-image': 'url(' + users[2].avatar + ')'}"></div>
     </div>
     <div class="info">
       <div class="name">
-       {{third.name}}
+        {{ (users[2].name.length>6)? (users[2].name | slice:0:6)+'..':(users[2].name) }}
       </div>
       <div class="subName">
-        {{third.role}}
+        {{users[2].role}}
       </div>
     </div>
     <div class="chipContainer">
       <div class="chip">
-        {{third.points}}
+        {{users[2].score}}
       </div>
     </div>
   </div>

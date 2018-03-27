@@ -19,7 +19,8 @@ import { LeaderboardIndividualCardComponent } from './leaderboards/leaderboard-i
 import { DashboardOverviewComponent } from './dashboard/dashboard-overview/dashboard-overview.component';
 import { LeaderboardsModule } from './leaderboards/leaderboards.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { AuthModule } from './auth/auth.module'
+import { AuthModule } from './auth/auth.module';
+
 const routes: Routes = [
   { path: '', redirectTo: 'leaderboards', pathMatch: 'full' },
   { path: 'leaderboards', component: LeaderboardOverviewComponent },
@@ -28,7 +29,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -19,3 +19,33 @@
 hr {
     margin-top: 24px;
 }
+
+
+@keyframes CardFadeIn {
+    0% {
+        opacity:0;
+        transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px ,0px)  ;
+    }
+  }
+  
+  .card-fade-in{
+    animation: CardFadeIn 1s;
+  }
+
+
+@keyframes fadeInItem{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+  }
+  
+  .fade-in-item{
+    animation: fadeInItem 2s;
+  }

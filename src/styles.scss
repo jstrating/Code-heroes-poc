@@ -5,15 +5,23 @@
 @include foundation-flex-grid;
 
 html {
-    height: 100%;
     width: 100%;
     // background-image: linear-gradient(to top left, #43cea2 0%, #185a9d 100%);
     background-image: linear-gradient(to top left, #C2DADE 0%, #FFFFFF 100%);
     background-repeat:no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
+::-webkit-scrollbar-thumb {
+    background: rgb(28, 24, 39);
+}
 body {
+    overflow: auto;
     margin: 0;
     height: 100%;
     width: 100%;

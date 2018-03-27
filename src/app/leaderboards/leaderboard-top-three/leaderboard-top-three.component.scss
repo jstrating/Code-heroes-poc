@@ -10,12 +10,12 @@
 }
 
 .first {
-    margin-left: 40px;
+    // margin-left: 40px;
 }
 
 .third{
     margin-top: 20px;
-    margin-left: 40px;
+    // margin-left: 40px;
 }
 
 .positionChange {
@@ -86,3 +86,17 @@
     color: #434343;
     background-color: #ECECEC;
 }
+
+
+@keyframes fadeInTopCoders {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+  }
+  
+  .fade-in-top-coders{
+    animation: fadeInTopCoders 2s;
+  }

@@ -4,7 +4,9 @@ import { MatToolbarModule, MatSidenavModule, MatIconModule, MatButtonModule} fro
 import {MatTabsModule} from '@angular/material/tabs';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ActivitySideNavComponent } from './activity-side-nav/activity-side-nav.component';
+import { ActivitySideNavComponent } from './activity-bar/activity-side-nav/activity-side-nav.component';
+import { ActivityFeedItemComponent } from './activity-bar/activity-feed-item/activity-feed-item.component';
+
 
 @NgModule({
     imports: [
@@ -15,7 +17,7 @@ import { ActivitySideNavComponent } from './activity-side-nav/activity-side-nav.
         MatIconModule,
         MatButtonModule
     ],
-    declarations: [WrapperComponent, NavbarComponent, ActivitySideNavComponent],
+    declarations: [WrapperComponent, NavbarComponent, ActivitySideNavComponent, ActivityFeedItemComponent],
     exports: [WrapperComponent, NavbarComponent]
 })
 export class SharedModule {}
