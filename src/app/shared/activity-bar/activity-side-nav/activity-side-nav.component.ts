@@ -32,13 +32,16 @@ export class ActivitySideNavComponent implements OnInit {
   dateObj = new Date();
   date = moment().format('MMMM Do YYYY');
   dayKey = moment().format('YYYYMMDD');
-
+  
   private scoresCollection: AngularFirestoreCollection<Score>;
   scores = [];
 
   constructor(db: AngularFirestore) {
-    this.scoresCollection = db.collection('scores', ref => ref.where('dayKey', '==', this.dayKey));
+    const maxItems = 20;
+    
+    this.scoresCollection = db.collection('scores', ref => ref.orderBy('time', 'desc').limit(maxItems));
     this.scoresCollection.stateChanges(['added', 'removed']).subscribe(data => {
+      console.log(data);
       return data.map(s => {
         const data = s.payload.doc.data() as Score;
         if (s.payload.type === 'added') {
@@ -48,13 +51,16 @@ export class ActivitySideNavComponent implements OnInit {
             var dateB = +new Date(b.time);
             return dateA - dateB;
           }).reverse();
-        } else if(s.payload.type === 'removed') {
-          this.scores = [];
-        }
 
+          if(this.scores.length > maxItems) {
+            this.scores.splice(maxItems);
+          }
+        } 
+  
       })
     });
-
+    
+   
   }
 
 

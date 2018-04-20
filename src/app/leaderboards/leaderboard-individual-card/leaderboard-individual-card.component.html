@@ -1,12 +1,12 @@
 <mat-card class="card-fade-in">
   <mat-card-title>Top coders today</mat-card-title>
   <mat-card-content class="fade-in-item">
-    <div *ngIf="users">
+    <div *ngIf="users" class="fade-in-item"> 
         <app-leaderboard-top-three [users]="users"></app-leaderboard-top-three>
     </div>
     <hr>
     <div class="regularCoders">
-      <mat-list *ngFor="let user of users | slice:3">
+      <mat-list *ngFor="let user of users | slice:3" class="fade-in-item">
         <app-leaderboard-item [user]="user"></app-leaderboard-item>
       </mat-list>
     </div>

@@ -17,13 +17,13 @@ export const scores = functions.https.onRequest(async (request, response) => {
   console.log('Input score', scoreObj);
 
   const score = <any>{};
-  if(scoreObj.player || '') score.player = scoreObj.player;
-  if(scoreObj.team || '') score.team = scoreObj.team;
-  if(scoreObj.description || '') score.description = scoreObj.description;
+  if (scoreObj.player || '') score.player = scoreObj.player;
+  if (scoreObj.team || '') score.team = scoreObj.team;
+  if (scoreObj.description || '') score.description = scoreObj.description;
   score.score = scoreObj.score || 0;
-  if(scoreObj.game || '') score.game = scoreObj.game;
+  if (scoreObj.game || '') score.game = scoreObj.game;
   score.time = scoreObj.time || new Date();
-  if(scoreObj.category || '') score.category = scoreObj.category;
+  if (scoreObj.category || '') score.category = scoreObj.category;
 
   console.log('Create new document', score);
 
@@ -34,3 +34,11 @@ export const scores = functions.https.onRequest(async (request, response) => {
 
 exports.onScore = functions.firestore.document('scores/{scoreId}')
   .onCreate(triggers.onScoreEvent);
+
+
+exports.testPubSub = functions.pubsub.topic('topic-name').onPublish((message) => {
+  console.log(message);
+  console.log(message.json);
+  console.log(message.json.name);
+  return Promise.resolve(true);
+})

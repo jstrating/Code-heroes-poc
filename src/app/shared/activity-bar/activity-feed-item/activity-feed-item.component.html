@@ -1,5 +1,5 @@
 <div class="my-animation" class="container row">
-  <div *ngIf="user" class="profileImage" [ngStyle]="{'background-image': 'url(' + user.photoURL + ')'}"></div>
+  <div *ngIf="user" class="profileImage" [ngStyle]="{'background-image': 'url(' + typeImg + ')'}"></div>
   <div *ngIf="user" class="info">
     <div class="name">
       {{scoreDescription}}
@@ -8,9 +8,8 @@
       {{user.displayName}}
     </div>
   </div>
-
   <div class="chip columns">
-    <div *ngIf="user" class="chipContent">
+    <div *ngIf="user" class="chipContent" [ngStyle]="{'color': changeColor}">
       {{score.score}}
     </div>
   </div>

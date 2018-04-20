@@ -17,6 +17,8 @@ export class ActivityFeedItemComponent implements OnInit {
   private dbRef: AngularFirestore;
   user: any;
   scoreDescription: string;
+  typeImg: string;
+  changeColor = "green";
 
   constructor(db: AngularFirestore) {
     this.dbRef = db;
@@ -30,27 +32,33 @@ export class ActivityFeedItemComponent implements OnInit {
     switch (this.score.description) {
       case 'BUILD_PASS':
         this.scoreDescription = 'Build passed'
+        this.typeImg = '../../assets/travis.png'
         break;
       case 'ISSUE_CLOSED':
         this.scoreDescription = 'Issue closed'
+        this.typeImg = '../../assets/jira.png'
         break;
       case 'MERGE':
         this.scoreDescription = 'Merged branch'
+        this.typeImg = '../../assets/github.png'
         break;
       case 'BUILD_FAIL':
         this.scoreDescription = 'Failed build'
+        this.typeImg = '../../assets/travis.png'
+        this.changeColor = 'red'
         break;
       case 'PULL_REQUEST':
         this.scoreDescription = 'Pull request'
+        this.typeImg = '../../assets/github.png'
         break;
       case 'COMMIT':
         this.scoreDescription = 'Pushed commit'
+        this.typeImg = '../../assets/github.png'
         break;
       case 'DEPLOY':
         this.scoreDescription = 'Deployed build'
+        this.typeImg = '../../assets/travis.png'
         break;
-
-
     }
   }
 

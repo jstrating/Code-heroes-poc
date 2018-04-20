@@ -1,5 +1,18 @@
+
+/* Large only */
+@media screen and (max-width: 1500px) {
+  .root{
+    width: 362px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .root{
+    width: 600px;
+  }
+}
+
 .root {
-    width: 328px;
     height: 100%;
     max-height: 100vh;
 }
